@@ -49,3 +49,5 @@ if __name__ == "__main__":
     cache_zip("./files/data.zip", "./files/cache")
     print(cached_files())
     print(find_password(cached_files()))
+    print(os.getcwd())
+    print(os.path.join(os.getcwd(), "files", "cache"))
