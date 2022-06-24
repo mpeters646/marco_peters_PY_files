@@ -23,9 +23,7 @@ def cache_zip(zip_file_path, cache_dir_path):
         zipObj.extractall(cache_dir_path)
 
 
-root_path = (
-    "C:\\Users\\marco\\Google Drive\\WincAcademy\\Winc_Academy_BED\\files\\cache"
-)
+root_path = os.path.join(os.getcwd(), "files", "cache")
 
 
 def cached_files():
@@ -46,7 +44,8 @@ def find_password(files_list):
                     return line[1].strip("\n")
 
 
-# clean_cache()
-# cache_zip("./files/data.zip", "./files/cache")
-# print(cached_files())
-# print(find_password(cached_files()))
+if __name__ == "__main__":
+    clean_cache()
+    cache_zip("./files/data.zip", "./files/cache")
+    print(cached_files())
+    print(find_password(cached_files()))
